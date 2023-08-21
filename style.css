@@ -1,0 +1,161 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+
+
+#screen {
+  width: 800px;
+  height: 650px;
+  background-color: pink;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+#home {
+  width: 800px;
+  height: 650px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1px;
+}
+
+#level1Intro {
+  width: 800px;
+  height: 650px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+#ending {
+  width: 800px;
+  height: 650px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+#level1 {
+  position: absolute;
+  width: 800px;
+  height: 650px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  padding: 0px;
+}
+
+
+.outfit {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 30px;
+}
+
+.slot {
+  position: absolute;
+  top: 20px;
+}
+
+#slot1 {
+  left: 50px;
+}
+
+#slot2 {
+  left: 200px;
+}
+
+#slot3 {
+  left: 380px;
+}
+
+#slot4 {
+  right: 200px;
+}
+
+#slot5 {
+  right: 50px;
+}
+
+#play {
+  display: none;
+}
+
+.titulo{
+  color: rgb(224, 40, 71);
+  font-weight: 700;
+  font-family: Georgia;
+  border-block-start-style: dotted; 
+
+}
+#finalMsg{
+  color: rgb(224, 40, 71);
+  border-block-start-style: dotted; 
+  font-weight: 700;
+  font-family: Georgia;
+}
+
+.context{
+  color:white;
+  background-color: rgb(224, 40, 71);
+  border-style: inset;
+  text-align: center;
+  padding: 2%;
+  margin: 2%;
+  border-radius: 30px;
+  font-family: Verdana;
+}
+.imgHome{
+  width: 47%;
+  height: 47%;
+  border-radius: 30%;
+  border: solid 3px;
+  border-color: aliceblue;
+  margin: 5px 15px;
+  
+}
+#imgContext{
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+}
+
+.botao{
+  border-radius: 20px 10px;
+  color:blueviolet;
+  padding: 5px;
+  border-color: rgba(0, 0, 0, 0.37);
+  background-color: white;
+  font-weight: bold
+}
+
+.imgL1 {
+  margin: 20px;
+}
+
+#bye {
+  display: none;
+}
+
+h1{
+  text-justify: center;
+  color: rgb(224, 40, 71);
+}
+
+/* #dev {
+  display: none;
+} */
