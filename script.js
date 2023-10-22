@@ -214,8 +214,6 @@ function refresh() {
         let img = new Image();
         img.src = "img/"+itemsTotal[1]+"png";
         images.push(img);
-        console.log(i);
-        //loadingText.innerHTML = "Carregando"+i+"/"+itemsTotal.length;
       }
       if (images.length >= itemsTotal.length) {
         loading.style.display = "none";
