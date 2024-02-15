@@ -27,6 +27,7 @@ var RIGHT = false;
 
 //////////////////////////////////////////////////////
 
+var loading = document.getElementById('loading');
 var imageUrls = [
   'img/body.png',
   'img/acc0.png',
@@ -81,6 +82,7 @@ function preloadImages(imageUrls) {
 
 // Call the preloadImages function to start preloading
 preloadImages(imageUrls);
+loading.style.display = "none";
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 

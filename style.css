@@ -80,7 +80,7 @@ html {
 }
 
 #loading {
-  display: none;
+  display: flex;
   position: absolute;
   width: 800px;
   height: 650px;
