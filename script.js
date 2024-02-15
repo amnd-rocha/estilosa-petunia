@@ -25,65 +25,6 @@ var loop = [];
 var LEFT = false; 
 var RIGHT = false;
 
-//////////////////////////////////////////////////////
-
-var loading = document.getElementById('loading');
-var imageUrls = [
-  'img/body.png',
-  'img/acc0.png',
-  'img/acc1.png',
-  'img/acc2.png',
-  'img/acc3.png',
-  'img/acc4.png',
-  'img/bottom0.png',
-  'img/bottom1.png',
-  'img/bottom2.png',
-  'img/bottom3.png',
-  'img/bottom4.png',
-  'img/top0.png',
-  'img/top1.png',
-  'img/top2.png',
-  'img/top3.png',
-  'img/top4.png',
-  'img/look0.png',
-  'img/look1.png',
-  'img/look2.png',
-  'img/look3.png',
-  'img/image1.png',
-  'img/image2.png',
-  'img/image3.png',
-  'img/image4.png',
-  'img/checklist.jpg',
-  'img/zacc0.png',
-  'img/zacc1.png',
-  'img/zacc2.png',
-  'img/zacc3.png',
-  'img/zacc4.png',
-  'img/zbottom0.png',
-  'img/zbottom1.png',
-  'img/zbottom2.png',
-  'img/zbottom3.png',
-  'img/zbottom4.png',
-  'img/ztop0.png',
-  'img/ztop1.png',
-  'img/ztop2.png',
-  'img/ztop3.png',
-  'img/ztop4.png',
-  // Add more image URLs as needed
-];
-
-// Function to preload images
-function preloadImages(imageUrls) {
-  for (var i = 0; i < imageUrls.length; i++) {
-      var img = new Image();
-      img.src = imageUrls[i];
-  }
-}
-
-// Call the preloadImages function to start preloading
-preloadImages(imageUrls);
-loading.style.display = "none";
-
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 var itemsTotal = [];
@@ -190,6 +131,18 @@ function wear (item) {
   return;
 }
 
+var loading = document.getElementById('loading');
+
+// Function to preload images
+function preloadClothes() {
+  for (var i = 0; i < itemsTotal.length; i++) {
+    wear(itemsTotal[i]);
+  }
+}
+
+// Call the preloadImages function to start preloading
+preloadClothes();
+loading.style.display = "none";
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //Funcao que checa se o look vestido eh igual ao objetivo
