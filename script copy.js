@@ -35,6 +35,7 @@ for (let i=0; i<5; i++) {
   itemsTotal.push('top'+i);
 }
 
+
 //Listas de looks
 var outfit = ['acc0', 'shoes0', 'bottom0', 'top0'];
 
@@ -130,6 +131,24 @@ function wear (item) {
   return;
 }
 
+var loading = document.getElementById('loading');
+var loadingText = document.getElementById('loadingText');
+
+// Function to preload images
+function preloadClothes() {
+  let total = itemsTotal.length;
+  loadingText.innerText = "Loading ["+0+"/"+total+"]";
+  let j = 0;
+  for (var i = total; i > 0; i--) {
+    wear(itemsTotal[i-1]);
+    j++;
+    loadingText.innerText = "Loading ["+j+"/"+total+"]";
+  }
+}
+
+// Call the preloadImages function to start preloading
+preloadClothes();
+loading.style.display = "none";
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //Funcao que checa se o look vestido eh igual ao objetivo
@@ -223,14 +242,16 @@ function refresh() {
       ending.style.display = 'none';
       levelNum.textContent = outfitNum;
       if (outfitNum == 2) {
-        levelDescription.textContent = 'Vista Petúnia para ir à feira medieval';
+        levelDescription.innerHTML = 'Next stop: medieval fair! <br/>Do your magic and help Bloom get there<br/> in time to win the costume contest!';
       }
       if (outfitNum == 3) {
-        levelDescription.textContent = 'Vista Petúnia para ir ao show de rock.';
+        levelDescription.innerHTML = 'Finally, the last stop: a punk festival!<br/> Ensure Bloom stops the show, but make it quick<br/> cause their favourite band are the opening act!';
       }
       break;
     }
     case page == 3: {
+      
+
       home.style.display = 'none';
       level1Intro.style.display = 'none';
       level1.style.display = 'flex';
@@ -254,19 +275,19 @@ function refresh() {
       ending.style.display = 'flex';
       look.src = 'img/look'+outfitNum+'.png';
       if (outfitNum == 1) {
+        ending.style.backgroundImage = "url('img/image2.png')";
         finalMsg.innerHTML = 'Wow! Thanks to you, Bloom<br/>earned an A+ for style!';
-        level1Intro.style.backgroundImage = 'url("img/image2.png")';
       }
       if (outfitNum == 2) {
+        ending.style.backgroundImage = "url('img/image3.png')";
         finalMsg.innerHTML = "Mirror, mirror on the wall<br/>guess who's the fairest elf of them all?";
-        level1Intro.style.backgroundImage = 'url("img/image3.png")';
       }
       if (outfitNum == 3) {
+        ending.style.backgroundImage = "url('img/image4.png')";
         finalMsg.innerHTML = 'Hell, yeah! This outfit rocked<br/> harder than the show itself!';
-        level1Intro.style.backgroundImage = 'url("img/image4.png")';
         nextButton.style.display = 'none';
         bye.style.display = 'flex';
-        look.style.margin = 80+'px';
+        ending.style.paddingTop="20px";
       }
       break;
     }
