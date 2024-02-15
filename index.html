@@ -4,7 +4,7 @@
 <head>
   <meta charset='utf-8'>
   <meta name='viewport' content='width=device-width'>
-  <title>Jogo de vestir Petúnia</title>
+  <title>Bloom's Closet Chaos</title>
   <link rel='icon' type='image/x-icon' href='favicon.ico.png'>
   <link href='style.css' rel='stylesheet' type='text/css' />
 </head>
@@ -12,28 +12,26 @@
 <body>
   <div id='screen'>
     <div id='home'>
-      <h1 class="titulo">A estilosa Petúnia </h1>
+      <h1 class="titulo">Bloom's Closet Chaos</h1>
       <div id="imgContext"> 
-        <img class='imgHome'src="img/universidade.png" />
-        <img class='imgHome'src="img/medieval.png" />
-        <img class='imgHome'src="img/rock.png" />
+        <div class="context">
+          <img width="150px" src="img/look0.png"/>
+          <img width="150px" src="img/checklist.jpg"/>
+        </div>
       </div>
 
-      <h3 class='context'> Petúnia é uma universitária, super estilosa e curiosa. Ela ama frequentar diferentes eventos. Devido a isso ela nunca consegue arrumar seu quarto e sempre fica uma bagunça.<br>
-        Hoje vai ser daqueles dias super aterefados de sua rotina. No início do dia ela vai a faculdade, depois a feira medieval e no final do dia a um show de rock. <br>
-        Ajude-a organizar três looks diferentes para esses eventos.
-        Lembre-se que para que ela ter um look completo, ela precisa de uma blusa, uma calça, um sapato e um acessório.
-        </h3>
+      <h3 class='context'>Oh, no! Bloom has a full day ahead, <br/>but their room is a total mess!<br/>
+      Can you help them find the right clothes and <br/>get dressed for each appointment on time?</h3>
 
       <form>
-        <input id='start' class="botao" type='button' value='Jogar'/>
+        <input id='start' class="botao" type='button' value='Play'/>
       </form>
     </div>
 
     <div id='level1Intro'>
-      <h1 class="titulo">Fase <span id='levelNum'></span></h1>
+      <h1 class="titulo">Phase <span id='levelNum'></span></h1>
 
-      <div>
+      <div id="previewRow">
         <img id='preview1' class ='imgL1' src="img/zacc1.png" />
         <img id='preview2' class ='imgL1' src="img/zbottom1.png" />
         <img id='preview3' class ='imgL1' src="img/ztop1.png" />
@@ -41,11 +39,10 @@
       </div>
 
       <h3 class ='context'> 
-        <span id='levelDescription'>Ah não!!<br>Ao puxar uma peça com rapidez do seu guarda-roupa bagunçado para experimentar, as roupas de Petúnia que estavam amontoadas começaram a despencar do seu guarda-roupa.<br>
-        Ajude-a pegar as peças adequadas para montar seu look para faculdade.</span>
+        <span id='levelDescription'>First stop: university!<br/>Bloom's almost failing for attendance,<br/>so don't let them miss their first class!</span>
       </h3>
       <form>
-        <input id='go' class="botao" type='button' value='Iniciar'/>
+        <input id='go' class="botao" type='button' value='Go'/>
       </form>
     </div>
 
@@ -68,14 +65,18 @@
         <input id='dev' class="botao" type='button' value='[Dev]'/>
       </form>
     </div>
+
+    <div id="loading">
+      <h1 id="loadingText">Loading</h1>
+    </div>
   
 
     <div id='ending'>
-      <h1 id='finalMsg'>Uau, Petúnia arrasou!</h1>
+      <h1 id='finalMsg'></h1>
       <img id='look' src='img/look1.png'/>
-      <h3 id='bye' class='context'>Obrigada por jogar!</h3>
+      <h3 id='bye' class='context'>Congrats! You got Bloom through the day in style!</h3>
       <form>
-        <input id='next' class="botao" type='button' value='Próxima fase'/>
+        <input id='next' class="botao" type='button' value='Next'/>
       </form>
     </div>
   

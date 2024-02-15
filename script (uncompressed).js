@@ -35,6 +35,7 @@ for (let i=0; i<5; i++) {
   itemsTotal.push('top'+i);
 }
 
+
 //Listas de looks
 var outfit = ['acc0', 'shoes0', 'bottom0', 'top0'];
 
@@ -223,14 +224,16 @@ function refresh() {
       ending.style.display = 'none';
       levelNum.textContent = outfitNum;
       if (outfitNum == 2) {
-        levelDescription.textContent = 'Vista Petúnia para ir à feira medieval';
+        levelDescription.innerHTML = 'Now Bloom is going to a medieval fair!<br/>Do your magic and find their costume!';
       }
       if (outfitNum == 3) {
-        levelDescription.textContent = 'Vista Petúnia para ir ao show de rock.';
+        levelDescription.innerHTML = 'Now finally, the last stop: punk festival! Make sure Bloom stops the show, just make it quick cause their favourite band are the opening act!';
       }
       break;
     }
     case page == 3: {
+      
+
       home.style.display = 'none';
       level1Intro.style.display = 'none';
       level1.style.display = 'flex';
@@ -254,19 +257,19 @@ function refresh() {
       ending.style.display = 'flex';
       look.src = 'img/look'+outfitNum+'.png';
       if (outfitNum == 1) {
+        ending.style.backgroundImage = "url('img/image2.png')";
         finalMsg.innerHTML = 'Wow! Thanks to you, Bloom<br/>earned an A+ for style!';
-        level1Intro.style.backgroundImage = 'url("img/image2.png")';
       }
       if (outfitNum == 2) {
+        ending.style.backgroundImage = "url('img/image3.png')";
         finalMsg.innerHTML = "Mirror, mirror on the wall<br/>guess who's the fairest elf of them all?";
-        level1Intro.style.backgroundImage = 'url("img/image3.png")';
       }
       if (outfitNum == 3) {
+        ending.style.backgroundImage = "url('img/image4.png')";
         finalMsg.innerHTML = 'Hell, yeah! This outfit rocked<br/> harder than the show itself!';
-        level1Intro.style.backgroundImage = 'url("img/image4.png")';
         nextButton.style.display = 'none';
         bye.style.display = 'flex';
-        look.style.margin = 80+'px';
+        ending.style.paddingTop="20px";
       }
       break;
     }
