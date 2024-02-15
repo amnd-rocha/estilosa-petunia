@@ -254,13 +254,16 @@ function refresh() {
       ending.style.display = 'flex';
       look.src = 'img/look'+outfitNum+'.png';
       if (outfitNum == 1) {
-        finalMsg.innerHTML = 'Da cabeça até as pontas dos pés, <br/> esse look valeu nota dez!';
+        finalMsg.innerHTML = 'Wow! Thanks to you, Bloom<br/>earned an A+ for style!';
+        level1Intro.style.backgroundImage = 'url("img/image2.png")';
       }
       if (outfitNum == 2) {
-        finalMsg.innerHTML = 'Quem negar cometerá calúnia: <br/> não há elfa mais estilosa que Petúnia!';
+        finalMsg.innerHTML = "Mirror, mirror on the wall<br/>guess who's the fairest elf of them all?";
+        level1Intro.style.backgroundImage = 'url("img/image3.png")';
       }
       if (outfitNum == 3) {
-        finalMsg.innerHTML = 'Até mais que o próprio show, <br/>Petúnia foi puro rock & roll!';
+        finalMsg.innerHTML = 'Hell, yeah! This outfit rocked<br/> harder than the show itself!';
+        level1Intro.style.backgroundImage = 'url("img/image4.png")';
         nextButton.style.display = 'none';
         bye.style.display = 'flex';
         look.style.margin = 80+'px';
