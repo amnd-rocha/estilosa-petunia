@@ -24,7 +24,15 @@ var loop = [];
 
 var LEFT = false; 
 var RIGHT = false;
+////////////////////////////////////////////////////////////////////////////////////////////////////
+var finalMsg = document.getElementById('finalMsg');
+var nextButton = document.getElementById('next');
+var levelDescription = document.getElementById('levelDescription');
+var levelNum = document.getElementById('levelNum');
 
+var preview = document.querySelectorAll('.imgL1');
+var bye = document.getElementById('bye');
+var look = document.getElementById('look');
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 var itemsTotal = [];
@@ -135,19 +143,33 @@ var loading = document.getElementById('loading');
 var loadingText = document.getElementById('loadingText');
 
 // Function to preload images
-function preloadClothes() {
+function preloadImages() {
   let total = itemsTotal.length;
-  loadingText.innerText = "Loading ["+0+"/"+total+"]";
+  let looks = total/4;
+  loadingText.innerText = "Loading ["+0+"/"+28+"]";
   let j = 0;
-  for (var i = total; i > 0; i--) {
+  for (let i = total; i > 0; i--) {
     wear(itemsTotal[i-1]);
+    //console.log("Loaded: "+itemsTotal[i-1]);
     j++;
-    loadingText.innerText = "Loading ["+j+"/"+total+"]";
+    loadingText.innerText = "Loading ["+j+"/"+28+"]";
+  }
+  for (let i = 0; i < looks-1 ; i++) {
+    look.src = 'img/look'+i+'.png';
+    //console.log("Loaded: "+"look"+i+".png");
+    j++;
+    loadingText.innerText = "Loading ["+j+"/"+28+"]";
+  }
+  for (let i = 2; i < 5 ; i++) {
+    ending.style.backgroundImage = "url('img/image"+i+".png')";
+    //console.log("Loaded: "+"image"+i+".png");
+    j++;
+    loadingText.innerText = "Loading ["+j+"/"+28+"]";
   }
 }
 
 // Call the preloadImages function to start preloading
-preloadClothes();
+preloadImages();
 loading.style.display = "none";
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -210,14 +232,6 @@ function gameLoop() {
   }
 }
 
-var finalMsg = document.getElementById('finalMsg');
-var nextButton = document.getElementById('next');
-var levelDescription = document.getElementById('levelDescription');
-var levelNum = document.getElementById('levelNum');
-
-var preview = document.querySelectorAll('.imgL1');
-var bye = document.getElementById('bye');
-var look = document.getElementById('look');
 
 function refresh() {
   switch (true) {
