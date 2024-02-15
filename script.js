@@ -135,8 +135,9 @@ var loading = document.getElementById('loading');
 
 // Function to preload images
 function preloadClothes() {
-  for (var i = 0; i < itemsTotal.length; i++) {
+  for (var i = itemsTotal.length; i > 0; i--) {
     wear(itemsTotal[i]);
+    console.log(itemsTotal[i]);
   }
 }
 
