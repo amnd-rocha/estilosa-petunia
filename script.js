@@ -132,12 +132,17 @@ function wear (item) {
 }
 
 var loading = document.getElementById('loading');
+var loadingText = document.getElementById('loadingText');
 
 // Function to preload images
 function preloadClothes() {
-  for (var i = itemsTotal.length; i > 0; i--) {
-    wear(itemsTotal[i]);
-    console.log(itemsTotal[i]);
+  let total = itemsTotal.length;
+  loadingText.innerText = "Loading ["+0+"/"+total+"]";
+  let j = 0;
+  for (var i = total; i > 0; i--) {
+    wear(itemsTotal[i-1]);
+    j++;
+    loadingText.innerText = "Loading ["+j+"/"+total+"]";
   }
 }
 
