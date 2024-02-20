@@ -19,7 +19,7 @@ var level1 = document.getElementById('level1');
 var level1Intro = document.getElementById('level1Intro');
 var ending = document.getElementById('ending');
 
-var page = 1; // define a pagina inicial
+var page = 0; // define a pagina inicial
 var loop = [];
 
 var LEFT = false; 
@@ -169,8 +169,6 @@ function preloadImages() {
 }
 
 // Call the preloadImages function to start preloading
-preloadImages();
-loading.style.display = "none";
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //Funcao que checa se o look vestido eh igual ao objetivo
@@ -235,6 +233,16 @@ function gameLoop() {
 
 function refresh() {
   switch (true) {
+    case page == 0: {
+      home.style.display = 'none';
+      level1Intro.style.display = 'none';
+      level1.style.display = 'flex';
+      ending.style.display = 'none';
+      dollX = 0;     
+      preloadImages();
+      loading.style.display = "none";
+      page = 1;
+    }
     case page == 1: {
       home.style.display = 'flex';
       level1Intro.style.display = 'none';
@@ -263,7 +271,7 @@ function refresh() {
       }
       break;
     }
-    case page == 3: {
+    case page == 3 : {
       
 
       home.style.display = 'none';
